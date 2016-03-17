@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MVP Build 1: Release Notes by Microsoft</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>MVP Build 1: Release Notes</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/Microsoft/willow">View the Project on GitHub <small>Microsoft/willow</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Microsoft/willow/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Microsoft/willow/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Microsoft/willow">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Please report any bugs you find using <a href="https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6427">this Connect template</a>. In particular, if you receive an unexpected error during installation, we want to hear about it as soon as possible! Please attach the generated log file, if one exists, to the bug so we can further diagnose. </p>
+
+<p>Other known issues and limitations are listed below:</p>
+
+<h3>
+<a id="general" class="anchor" href="#general" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General</h3>
+
+<ul>
+<li>Many common project types, including ASP.NET Core and Universal Windows Platform are not supported in the first preview release; these will be added after //build.</li>
+<li>Install sizes reported are close estimates, but may be slightly inaccurate.</li>
+<li>The new setup engine does not yet register file associations for project and solution types that it handles, so opening from File Explorer will not instantiate Visual Studio “15” Preview at this time.</li>
+<li>The Markdown TextMate bundle does not correctly colorize headings.</li>
+<li>Source file colorization may not work correctly when debugging code loaded from a source control server.</li>
+<li>When you install just the Visual Studio core editor component, Team Explorer commands that require Office integration (send mail and open in Excel) will be inoperable. These features work if you have any other component installed.</li>
+<li>In the current build of the installer, the Modify command operates by uninstalling and reinstalling, rather than directly modifying the installation. This is a temporary limitation of the setup engine and will be fixed in a later build.</li>
+<li>Uninstall fully removes Visual Studio, but some external dependencies (e.g. Windows SDK, .NET Framework SDK) may still be present on your machine. You can manually remove these from Add/Remove Programs if they are not being used by other Visual Studio releases you may have on your machine.</li>
+</ul>
+
+<h3>
+<a id="net-desktop-development" class="anchor" href="#net-desktop-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.NET Desktop Development</h3>
+
+<ul>
+<li>No other known issues with this component.</li>
+</ul>
+
+<h3>
+<a id="c" class="anchor" href="#c" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>C++</h3>
+
+<ul>
+<li>The lightweight installer does not currently support ATL or MFC.</li>
+<li>The C++ component will not work correctly in a side-by-side installation with an Visual Studio “15” Preview install from the classic installer. This is a known issue and will be fixed in the next release.</li>
+</ul>
+
+<h3>
+<a id="python" class="anchor" href="#python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python</h3>
+
+<ul>
+<li>PyLint is not currently supported.</li>
+</ul>
+
+<h3>
+<a id="unity" class="anchor" href="#unity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unity</h3>
+
+<ul>
+<li>To use the Unity tools in Visual Studio, you will first need to install the latest Unity beta, which can be found at this location: <a href="http://unity3d.com/unity/beta">http://unity3d.com/unity/beta</a>.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Microsoft">Microsoft</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
