@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Visual Studio "15" Preview 2 with new installer: Release Notes</title>
+    <title>Visual Studio "15" Preview 3 with new installer: Release Notes</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -15,13 +15,20 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Visual Studio "15" Preview 2 with new installer</br></br>Release Notes</h1>
+        <h1>Visual Studio "15" Preview 3 with new installer</br></br>Release Notes</h1>
         <p></p>
       </header>
       <section>
-        <p>Download the new installer here: <a href="http://aka.ms/vsnewinstaller">http://aka.ms/vsnewinstaller</a>. Please report any bugs you find using <a href="https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6427">this Connect template</a>. In particular, if you receive an unexpected error during installation, we want to hear about it as soon as possible! Please attach the generated log file, if one exists, to the bug so we can further diagnose. </p>
+        <p>Please report any bugs you find using <a href="https://connect.microsoft.com/VisualStudio/Feedback/LoadSubmitFeedbackForm?FormID=6427">this Connect template</a>. In particular, if you receive an unexpected error during installation, we want to hear about it as soon as possible! Please attach the generated log file, if one exists, to the bug so we can further diagnose. </p>
 
 <h2>Changelog</h2>
+<h3>Visual Studio "15" Preview 3 (15.0.25428.1)</h3>
+<ul>
+  <li>Updated installed Visual Studio build to Preview 3.</li>
+  <li>Switched to new setup engine</li>
+  <li>Replaced machine-wide MSBuild SDK with a low-impact per-instance component.</li>
+  <li>Installer now requires a minimum of .NET Framework 4.6</li>
+</ul>
 <h3>Visual Studio "15" Preview 2 (15.0.0-160506.11)</h3>
 <ul>
   <li>Updated installed Visual Studio build to Preview 2.</li>
@@ -40,25 +47,25 @@
 </ul>
 
 <h2>Known Issues</h2>
-<p>This Visual Studio "15" Preview 2 experience has generally the same known issues as those documented on <a href="https://msdn.microsoft.com/en-US/library/05e0e20e-7ace-41fe-b0bc-3becc37ae618">msdn.microsoft.com</a>. Additional known issues and limitations are listed below:</p>
+<p>This Visual Studio "15" Preview 3 experience has generally the same known issues as those documented on <a href="https://msdn.microsoft.com/en-US/library/05e0e20e-7ace-41fe-b0bc-3becc37ae618">msdn.microsoft.com</a>. Additional known issues and limitations are listed below:</p>
 
 <h3>
 <a id="installation" class="anchor" href="#general" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
 
 <ul>
-<li>Many common project types, including ASP.NET Core and Universal Windows Platform are not supported in the first preview release; these will be added after //build.</li>
-<li>Install sizes reported are close estimates, but may be slightly inaccurate.</li>
-<li>In the current build of the installer, the Modify command operates by uninstalling and reinstalling, rather than directly modifying the installation. This is a temporary limitation of the setup engine and will be fixed in a later build.</li>
-<li>Uninstall fully removes Visual Studio, but some external dependencies (e.g. Windows SDK, .NET Framework SDK) may still be present on your machine. You can manually remove these from Add/Remove Programs if they are not being used by other Visual Studio releases you may have on your machine.</li>
-<li>The new setup engine does not yet register file associations for project and solution types that it handles, so opening from File Explorer will not instantiate Visual Studio “15” Preview at this time.</li>
+<li>If you are a Windows Insider, you may receive an erroneous warning from Windows SmartScreen that the file is unsigned. This is due to a change in the Authenticode signing requirements for Windows executables. You should be able to right-click on the file, choose Properties and verify for yourself that the file is SHA-1 and SHA-256 dual signed from a trusted Microsoft root certificate chain. This will be fixed in a future release.</li>
+<li>If you are upgrading from Preview 2, you will be prompted to upgrade the installer itself. After upgrading the client, there is an intermittent error in some situations where the Upgrade button does not work. To resolve this issue, close the Visual Studio Installer application and reopen it, at which point the Upgrade button should be functional.</li>
+<li>Many common project types, including ASP.NET Core and Universal Windows Platform are not supported in the current preview release, but will be added in a later release.</li>
+<li>Install on-disk sizes reported may be somewhat inaccurate.</li>
+<li>The new setup engine does not yet register file associations for project and solution types that it handles, so opening from File Explorer will not instantiate Visual Studio “15” Preview at this time. This will be fixed in a future build.</li>
+<li>Uninstall fully removes Visual Studio, but some external dependencies (e.g. .NET Framework SDK) may still be present on your machine. You can manually remove these from Add/Remove Programs if they are not being used by other Visual Studio releases you may have on your machine.</li>
+<li>On operating systems other than Windows 10 64-bit, when installing the C++ workload, you should reboot your computer before using Visual Studio. We'll be adding proper reboot handling in an upcoming release.</li>
 </ul>
 
 <h3>
 <a id="editor" class="anchor" href="#editor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visual Studio Editor</h3>
 
 <ul>
-<li>The Send Feedback / Report a Problem menu item is broken in the current build.</li>
-<li>The Markdown language support does not correctly colorize headings.</li>
 <li>Source file colorization may not work correctly when debugging code loaded from a source control server.</li>
 <li>When you install just the Visual Studio core editor component, Team Explorer commands that require Office integration (send mail and open in Excel) will be inoperable. These features work if you have any other component installed.</li>
 </ul>
@@ -86,9 +93,7 @@
 
 <ul>
 <li>PyLint is not currently supported.</li>
-<li>No IronPython, profiling or web support</li>
-<li><a href="https://github.com/Microsoft/PTVS/issues/1167">https://github.com/Microsoft/PTVS/issues/1167</a></li>
-<li><a href="https://github.com/Microsoft/PTVS/issues/1166">https://github.com/Microsoft/PTVS/issues/1166</a></li>
+<li>No profiling or web support</li>
 </ul>
 
 <h3>
